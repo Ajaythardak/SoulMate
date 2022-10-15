@@ -1,0 +1,64 @@
+<BR>
+<h1 style=" font-size: 45px; font-weight: 400;"> REGISTRATION FORM</h1>
+<br>
+<h3>Please provide some details to create an Account.</h3>
+<div style="padding-bottom: 70px;">
+<form (submit)="onSubmit()" [formGroup]="registerForm">
+<div class="example-container">
+  <mat-form-field appearance="fill">
+    <mat-label>Enter your Name</mat-label>
+    <input matInput id="name" type="text" formControlName="name" required>
+  </mat-form-field>
+  <br>
+  <mat-form-field appearance="fill">
+    <mat-label>Enter your Age</mat-label>
+    <input matInput id="age" type="number" formControlName="age" required>
+  </mat-form-field>
+  <br>
+  <mat-form-field appearance="fill">
+    <mat-label>Enter your Gender</mat-label>
+    <input matInput id="gender" type="text" formControlName="gender" required>
+  </mat-form-field>
+  <br>
+  <mat-form-field appearance="fill">
+    <mat-label>Enter your City</mat-label>
+    <input matInput id="city" type="text" formControlName="city" required>
+  </mat-form-field>
+  <br>
+  <mat-form-field appearance="fill">
+    <mat-label>Enter your Email Id</mat-label>
+    <input matInput placeholder="pat@example.com" id="emailId" type="text" formControlName="emailId" pattern="[a-z]*[0-9]*@[a-z]*.[a-z]{2,3}" required>
+  </mat-form-field>
+  <br>
+  <mat-form-field appearance="fill">
+    <mat-label>Enter your Password</mat-label>
+    <input matInput id="password" type="password" formControlName="password" pattern="[a-zA-Z0-9]*.+" required>
+  </mat-form-field>
+  <br>
+  <!-- <mat-form-field appearance="fill"> -->
+    <!-- <mat-label>Upload your picture</mat-label> -->
+    <!-- <input  required> -->
+  <!-- </mat-form-field> -->
+  <label>Choose file for your display picture :-  </label>
+  <br>
+  <br>
+  <!--  -->
+  <input id="picture" type="file" formControlName="picture" accept="image/*"  (change)="onChange($event)" required>
+  <br> <br>
+  <!-- [hidden]="!registerForm.valid" -->
+  <img [src]="myImage"  style="height:200px; width: 185px;" >
+</div>
+  <br>
+  <button mat-raised-button color="primary" [disabled]="!registerForm.valid" >Submit</button>
+</form>
+</div>
+<img src="https://www.drupal.org/files/project-images/reg_confirm_email_with_button_0.png" style="width: 450px; height: 450px; margin-top: -800px; margin-bottom: 420px; margin-left: 600px;" alt="">
+
+
+<!-- https://tinder.com/static/tinder.png -->
+ <br>
+<!-- <input type="file" >
+<br><br><br>
+<div >
+<img [src]="" width="500px" height="500px">
+</div> -->
